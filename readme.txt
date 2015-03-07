@@ -1,6 +1,6 @@
 === SF Generate Tags ===
 Contributors: Studiofreya
-Donate link: http://www.studiofreya.com
+Donate link: http://studiofreya.com/sf-generate-tags
 Tags: tags, auto, generate, edit, posts, images, attached, text, admin
 Requires at least: 3.8
 Tested up to: 4.0.1
@@ -22,6 +22,7 @@ This plugin helps generate tags for posts. It analyzes the name of attached imag
 == Installation ==
 1. Upload the plugin files to the /wp-content/plugins/ directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Use it while editing your posts in the Admin panel.
 
 == Frequently Asked Questions ==
 
