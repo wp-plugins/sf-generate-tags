@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Generate tags for posts from images or/and post text.
 
 == Description ==
-This plugin helps generate tags for posts. It analyzes the name of attached images and/or the post content (text) and places the resulting tags in the built in WordPress "Tags Widget" in the post editor.
+This plugin helps generate tags for posts. It analyzes the name of attached images and/or the post content (text) and places the resulting tags in the built-in WordPress "Tags Widget" in the post editor.
 [Plugin website](http://studiofreya.com/sf-generate-tags/)
 
 = Features: =
@@ -27,7 +27,7 @@ This plugin helps generate tags for posts. It analyzes the name of attached imag
 
 [Plugin page](http://studiofreya.com/sf-generate-tags/)
 
-Want more fetures? Tell us about ut!
+Want more features? Tell us about it!
 
 == Screenshots ==
 1. Admin widget.
@@ -35,7 +35,7 @@ Want more fetures? Tell us about ut!
 == ChangeLog ==
 
 = 1.0 =
-* Initial release!se!
+* Initial release!
 
 == Upgrade Notice ==
 
