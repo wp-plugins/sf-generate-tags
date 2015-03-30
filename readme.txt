@@ -52,6 +52,10 @@ Want more features? Tell us about it!
 
 == Upgrade Notice ==
 
+= 1.1 =
+Special filter for English language added. 
+First step to multilanguage tags plugin.
+
 = 1.0 =
 No upgrade available.
 
