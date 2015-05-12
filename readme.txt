@@ -3,7 +3,7 @@ Contributors: Studiofreya
 Donate link: http://studiofreya.com/sf-generate-tags
 Tags: tags, generate, edit, posts, images, attached, text, admin, taxonomy, autotags
 Requires at least: 3.8
-Tested up to: 4.0.1
+Tested up to: 4.2.2
 Stable tag: 1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,7 @@ This plugin should work with any language. It's filtering algorithm is designed 
 * Existing tags are preserved
 * Add other tags later
 * Regenerate tags after updating the post (or not)
+* Limit number of generated tags
 
 == Installation ==
 1. Upload the plugin files to the /wp-content/plugins/ directory
@@ -46,6 +47,11 @@ Want more features? Tell us about it!
 1. Admin widget.
 
 == ChangeLog ==
+
+= 1.2 =
+* Limit number of tags.
+* Better filter for English language.
+* po/mo files. Plugin is now translation ready.
 
 = 1.1 =
 * Special filter for English language added. First step to multilanguage tags plugin.
