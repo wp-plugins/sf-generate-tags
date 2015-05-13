@@ -4,7 +4,7 @@ Donate link: http://studiofreya.com/sf-generate-tags
 Tags: tags, generate, edit, posts, images, attached, text, admin, taxonomy, autotags
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.1
+Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
