@@ -19,7 +19,7 @@ class SFTags_Admin {
 		<input type="checkbox" name="sf_from_text" value="sf_from_images" id="sf_from_text" checked="checked"/><?php _e('From Text', 'sf-tags') ?>
 		<input type="hidden" name="sf_post_id" id="sf_post_id" value="<?php global $post; echo "$post->ID"; ?>">
 		<p><?php _e('Limit tags to:', 'sf-tags') ?></p>
-		<input type="number" name="sf_limit_tags" id="sf_limit_tags" value="40"/>
+		<input type="number" name="sf_limit_tags" id="sf_limit_tags" value=""/>
 		<br />
     	<a class="button" id="btnSubmit"><?php _e('Generate Tags', 'sf-tags') ?></a>
 		<br />

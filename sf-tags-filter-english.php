@@ -10,14 +10,14 @@ function filterEnglish($input_array) {
 	$addressing_words = array('another', 'both', 'dud', 'each', 'her', 'other', 'their', 'theirs');
 
 	$easy_words = array( 'after', 'against', 'ago', 'almost', 'along', 'also', 'although', 'always', 
-		'and', 'any', 'anyone', 'anytime', 'are', 'around', 'all', 'away',
+		'and', 'any', 'anyone', 'anytime', 'are', 'around', 'aside', 'all', 'away',
 		'become', 'because', 'behind', 'before', 'between', 'but', 'com', 'common', 
 		'different', 'down', 'due', 'either', 'extra', 'ever', 'every', 
 		'far', 'false', 'for', 'forever', 'from', 'further', 'full', 
 		'here', 'hers', 'him', 'how', 'however',
-		'inn', 'into', 'its', 'itself', 'jpg', 'just', 'less', 'mean', 'more', 'most', 'myself', 
-		'next', 'never', 'new', 'nobody', 'not', 'now',
-		'often', 'once', 'only', 'org', 'other', 'others', 'our', 'ours', 'out', 'over', 'per', 'plenty', 'png', 
+		'img', 'inn', 'into', 'its', 'itself', 'jpg', 'just', 'less', 'mean', 'more', 'most', 'myself', 
+		'next', 'never', 'new', 'nobody', 'non', 'not', 'now',
+		'often', 'once', 'only', 'onto', 'org', 'other', 'others', 'our', 'ours', 'out', 'over', 'per', 'plenty', 'png', 'rather',
 		'same', 'since', 'she', 'someone', 'something', 'sure', 'such',
 		'than', 'that', 'the', 'then', 'there', 'these', 'them', 'they', 'those', 'this', 'through', 'thus', 'too', 'together', 'true', 
 		'under', 'unless', 'via',
@@ -35,11 +35,11 @@ function filterEnglish($input_array) {
 		'thing', 'things', 'type',
 		'very');
 		
-	$adjectives = array('actual', 'authentic', 'bad', 'best', 'better', 'closed', 'cool', 'current', 		'difficult', 
+	$adjectives = array('actual', 'authentic', 'avoid', 'bad', 'best', 'better', 'closed', 'cool', 'current', 		'difficult', 
 		'easier', 'easily', 'few', 'full', 'fun', 'good', 
 		'great', 'huge', 'later', 'like', 'long', 'make', 'new', 'old', 'older', 'open', 
 		'poor', 'possible', 'proper', 'quite', 'real',
-		'seen', 'seldom', 'similar', 'small', 'taken', 'tiny', 'thrown', 'took', 'using', 'vice', 'versa');
+		'seen', 'seldom', 'similar', 'small', 'taken', 'tiny', 'thrown', 'took', 'toward', 'using', 'vice', 'versa');
 	
 	$verbs = array('able', 'achieve', 'add', 'afford', 'allow', 'allows', 'apply', 'arise', 'ask',
 		'been', 'beware', 'bought', 
@@ -48,7 +48,7 @@ function filterEnglish($input_array) {
 		'decide', 'delete', 'discuss', 'did', 'does', 'doing', 'done', 'edit', 'enjoy',
 		'fill', 'find', 'found', 'gather', 'gave', 'get', 'gets', 'give', 'gone', 'got', 'guess',
 		'had', 'happen', 'has', 'have', 'helps', 'jump', 'keep', 'kept', 'let', 'like', 'look', 'loose',
-		'made', 'make', 'may', 'mean', 'means', 'might', 'must', 'own', 'paste', 'pay', 'pick', 'put', 'prefer', 'propose',	'read', 'receive', 'remember', 'run',
+		'made', 'make', 'may', 'mean', 'means', 'might', 'must', 'occur', 'own', 'paste', 'pay', 'pick', 'put', 'prefer', 'propose',	'read', 'receive', 'remember', 'run',
 		'say', 'see', 'select', 'send', 'set', 'should', 'sit', 'spend', 'start', 'stay', 'stop', 'take', 'tell', 'took', 'try', 
 		'use', 'var', 'watch', 'want', 'was', 'were', 'will', 'would');
 		
@@ -72,6 +72,11 @@ function filterEnglish($input_array) {
 			|| wordEndsWith($word, "est")
 			|| wordEndsWith($word, "ght")
 			|| wordEndsWith($word, "ugh")
+			|| wordEndsWith($word, "id")
+			|| wordEndsWith($word, "made")
+			|| wordEndsWith($word, "ier")
+			|| wordEndsWith($word, "self")
+			|| wordEndsWith($word, "ary")
 		)
 		{ 	
 			$toOutput = false;

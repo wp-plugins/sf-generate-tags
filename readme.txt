@@ -3,7 +3,7 @@ Contributors: Studiofreya
 Donate link: http://studiofreya.com/sf-generate-tags
 Tags: tags, generate, edit, posts, images, attached, text, admin, taxonomy, autotags
 Requires at least: 3.8
-Tested up to: 4.2.2
+Tested up to: 4.3.0
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,6 +47,10 @@ Want more features? Tell us about it!
 1. Admin widget.
 
 == ChangeLog ==
+
+= 1.3 =
+* Removed default tags limit
+* Added more filter logic to English tags
 
 = 1.2 =
 * Limit number of tags.
