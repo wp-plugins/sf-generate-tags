@@ -39,32 +39,18 @@ This plugin should work with any language. It's filtering algorithm is designed 
 
 == Frequently Asked Questions ==
 
-[Plugin page](http://studiofreya.com/sf-generate-tags/)
+SF Generate Tags [FAQ](http://studiofreya.com/wordpress/wordpress-plugins/sf-generate-tags/faq/)
 
-Want more features? Tell us about it!
 
 == Screenshots ==
 1. Admin widget.
 
 == ChangeLog ==
 
-= 1.3 =
-* Removed default tags limit
-* Added more filter logic to English tags
+SF Generate Tags [ChangeLog](http://studiofreya.com/wordpress/wordpress-plugins/sf-generate-tags/changelog/)
 
-= 1.2 =
-* Limit number of tags.
-* Better filter for English language.
-* po/mo files. Plugin is now translation ready.
-
-= 1.1 =
-* Special filter for English language added. First step to multilanguage tags plugin.
-
-= 1.0 =
-* Initial release!
 
 == Upgrade Notice ==
 
-= 1.0 =
 No upgrade available.
 
