@@ -12,14 +12,14 @@ function filterEnglish($input_array) {
 	$easy_words = array( 'after', 'against', 'ago', 'almost', 'along', 'also', 'although', 'always', 
 		'and', 'any', 'anyone', 'anytime', 'are', 'around', 'aside', 'all', 'away',
 		'become', 'because', 'behind', 'before', 'between', 'but', 'com', 'common', 
-		'different', 'down', 'due', 'either', 'extra', 'ever', 'every', 
+		'different', 'down', 'due', 'either', 'etc', 'extra', 'ever', 'every', 
 		'far', 'false', 'for', 'forever', 'from', 'further', 'full', 
 		'here', 'hers', 'him', 'how', 'however',
 		'img', 'inn', 'into', 'its', 'itself', 'jpg', 'just', 'less', 'mean', 'more', 'most', 'myself', 
 		'next', 'never', 'new', 'nobody', 'non', 'not', 'now',
 		'often', 'once', 'only', 'onto', 'org', 'other', 'others', 'our', 'ours', 'out', 'over', 'per', 'plenty', 'png', 'rather',
 		'same', 'since', 'she', 'someone', 'something', 'sure', 'such',
-		'than', 'that', 'the', 'then', 'there', 'these', 'them', 'they', 'those', 'this', 'through', 'thus', 'too', 'together', 'true', 
+		'than', 'that', 'the', 'then', 'there', 'these', 'them', 'they', 'till', 'those', 'this', 'through', 'thus', 'too', 'together', 'true', 
 		'under', 'unless', 'via',
 		'what', 'whatever', 'when', 'whenever', 'where', 'whether', 'within', 'without', 'whatever', 'which', 'while', 'whithin', 'who', 'whole', 'whose', 'why', 'with', 
 		'yes', 'yet', 'you', 'your', 'yours');
@@ -35,7 +35,7 @@ function filterEnglish($input_array) {
 		'thing', 'things', 'type',
 		'very');
 		
-	$adjectives = array('actual', 'authentic', 'avoid', 'bad', 'best', 'better', 'closed', 'cool', 'current', 		'difficult', 
+	$adjectives = array('actual', 'authentic', 'avoid', 'bad', 'best', 'better', 'closed', 'cool', 'current', 'difficult', 
 		'easier', 'easily', 'few', 'full', 'fun', 'good', 
 		'great', 'huge', 'later', 'like', 'long', 'make', 'new', 'old', 'older', 'open', 
 		'poor', 'possible', 'proper', 'quite', 'real',
@@ -47,7 +47,7 @@ function filterEnglish($input_array) {
 		'could', 'considers', 'consists', 'contains', 'copy', 'could', 'create',
 		'decide', 'delete', 'discuss', 'did', 'does', 'doing', 'done', 'edit', 'enjoy',
 		'fill', 'find', 'found', 'gather', 'gave', 'get', 'gets', 'give', 'gone', 'got', 'guess',
-		'had', 'happen', 'has', 'have', 'helps', 'jump', 'keep', 'kept', 'let', 'like', 'look', 'loose',
+		'had', 'happen', 'has', 'have', 'helps', 'jump', 'keep', 'kept', 'know', 'let', 'like', 'look', 'loose',
 		'made', 'make', 'may', 'mean', 'means', 'might', 'must', 'occur', 'own', 'paste', 'pay', 'pick', 'put', 'prefer', 'propose',	'read', 'receive', 'remember', 'run',
 		'say', 'see', 'select', 'send', 'set', 'should', 'sit', 'spend', 'start', 'stay', 'stop', 'take', 'tell', 'took', 'try', 
 		'use', 'var', 'watch', 'want', 'was', 'were', 'will', 'would');
@@ -62,25 +62,24 @@ function filterEnglish($input_array) {
 			|| in_array( $word, $substantives )
 			|| in_array( $word, $adjectives )
 			|| in_array( $word, $verbs )
-			|| wordEndsWith($word, "al")
-			|| wordEndsWith($word, "able")
-			|| wordEndsWith($word, "ly")
-			|| wordEndsWith($word, "ed")
-			|| wordEndsWith($word, "'s")
-			|| wordEndsWith($word, "es")
-			|| wordEndsWith($word, "ing")
-			|| wordEndsWith($word, "est")
-			|| wordEndsWith($word, "ght")
-			|| wordEndsWith($word, "ugh")
-			|| wordEndsWith($word, "id")
-			|| wordEndsWith($word, "made")
-			|| wordEndsWith($word, "ier")
-			|| wordEndsWith($word, "self")
-			|| wordEndsWith($word, "ary")
 		)
 		{ 	
 			$toOutput = false;
 		} 
+		
+		//check same word single and multiple instances
+		if($toOutput == TRUE && wordEndsWith($word, "s")){
+			foreach ( $input_array as $matchingWord ) 
+			{
+				$wordWithoutS = substr($word, 0, -1);
+					
+				if(strcasecmp($wordWithoutS, $matchingWord) == 0)
+				{
+					$toOutput = false;					
+					break;
+				}
+			}
+		}
 
 		if($toOutput == TRUE){
 			array_push($output_array, $word);
@@ -134,10 +133,22 @@ function excludeSecondImportantWords($input_array) {
 			|| in_array( $word, $substantives )
 			|| in_array( $word, $adjectives )
 			|| in_array( $word, $verbs )
-			|| wordEndsWith($word, "s")
 			|| wordEndsWith($word, "en")
 			|| wordEndsWith($word, "y")
-			|| wordEndsWith($word, "t")
+			|| wordEndsWith($word, "al")
+			|| wordEndsWith($word, "able")
+			|| wordEndsWith($word, "ly")
+			|| wordEndsWith($word, "ed")
+			|| wordEndsWith($word, "'s")
+			|| wordEndsWith($word, "es")
+			|| wordEndsWith($word, "ing")
+			|| wordEndsWith($word, "est")
+			|| wordEndsWith($word, "ugh")
+			|| wordEndsWith($word, "id")
+			|| wordEndsWith($word, "made")
+			|| wordEndsWith($word, "ier")
+			|| wordEndsWith($word, "self")
+			|| wordEndsWith($word, "ary")
 		)
 		{ 	
 			$toOutput = false;
