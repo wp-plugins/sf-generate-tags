@@ -3,7 +3,7 @@
  * Plugin Name: SF Generate Tags
  * Plugin URI: http://studiofreya.com
  * Description: This plugin autogenerates tags for your posts from attached images names and post text
- * Version: 1.2.1
+ * Version: 1.3.1
  * Author: Studiofreya AS
  * Author URI: http://studiofreya.com
  * License: GPL3

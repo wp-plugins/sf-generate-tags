@@ -47,7 +47,7 @@ SF Generate Tags [FAQ](http://studiofreya.com/wordpress/wordpress-plugins/sf-gen
 
 == ChangeLog ==
 
-SF Generate Tags [ChangeLog](http://studiofreya.com/wordpress/wordpress-plugins/sf-generate-tags/changelog/)
+SF Generate Tags [ChangeLog](http://studiofreya.com/wordpress-plugins/sf-generate-tags/changelog/)
 
 
 == Upgrade Notice ==
